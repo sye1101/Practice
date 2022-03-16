@@ -45,8 +45,8 @@ class LightSwitchTest {
 		assertEquals(2, s.getLevel());
 		s.power();						// 전원 OFF
 		assertEquals(0, s.getLevel());	
-		s.power();						// 전원 ON
-		assertEquals(2, s.getLevel());	// 이전 상태로 복원
+		s.power();						// 전원 ON ( 밝기 이전 상태로 복원 )
+		assertEquals(2, s.getLevel());	 
 		
 	}
 

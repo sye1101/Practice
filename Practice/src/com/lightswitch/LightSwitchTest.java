@@ -34,5 +34,20 @@ class LightSwitchTest {
 		
 	}
 	
+	@Test
+	public void testPower() {
+		LightSwitch s = new LightSwitch();
+		
+		assertEquals(0, s.getLevel());	// 초기 상태
+		s.control();					// 전구 ON
+		assertEquals(3, s.getLevel());	
+		s.dim();						// 밝기 다운
+		assertEquals(2, s.getLevel());
+		s.power();						// 전원 OFF
+		assertEquals(0, s.getLevel());	
+		s.power();						// 전원 ON
+		assertEquals(2, s.getLevel());	// 이전 상태로 복원
+		
+	}
 
 }
